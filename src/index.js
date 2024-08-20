@@ -9,7 +9,7 @@ const { authRouter } = require("./routes/auth.route");
 const { authMiddleware } = require("./middleware/auth.middleware");
 dotenv.config();
 const app = express();
-
+const port = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 app.use(authMiddleware);
@@ -20,6 +20,6 @@ app.use("/records", recordRouter);
 app.use("/users", userRouter);
 app.use("/auth", authRouter);
 
-app.listen(3030, () => {
+app.listen(port, () => {
   console.log("Server is running on port 3030");
 });
