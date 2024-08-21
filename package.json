@@ -2,6 +2,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
+    "build": "nodemon src/index.js",
     "drizzle:generate": "drizzle-kit generate --config=drizzle.config.js"
   },
   "dependencies": {
